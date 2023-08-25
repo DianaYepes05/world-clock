@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.js"></script>
     <title>World clock</title>
 
     <link rel="stylesheet" href="src/styles.css" />
@@ -19,22 +21,22 @@
         <option value="auckland">Auckland</option>
       </select>
 
-      <div class="city">
+      <div class="city" id="los-angeles">
         <div>
-        <h2>Los Angeles 🇺🇸</h2>
-        <div class="date">August 24th 2023</div>
+          <h2>Los Angeles 🇺🇸</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">12:54 <small>AM</small></div>
+        <div class="time"></div>
       </div>
-      <div class="city">
+      <div class="city" id="sydney">
         <div>
-        <h2>Sidney 🇦🇺</h2>
-        <div class="date">August 24th 2023</div>
+          <h2>Sydney 🇦🇺</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">12:54 <small>AM</small></div>
+        <div class="time"></div>
       </div>
     </div>
-  </br>
+
     <footer>
       This project was coded by <strong>Diana Yepes </strong>💁🏻‍♀️ and is
       <a href="https://github.com/DianaYepes05/world-clock" target="_blank"
