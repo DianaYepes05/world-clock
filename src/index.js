@@ -26,8 +26,8 @@ if (sydney) {
   }
 }
 
-function updateCity(event) {
-  let cityTimeZone = event.target.value;
+function updateCity() {
+  let cityTimeZone = document.querySelector("#city").value;
 
   if (cityTimeZone === "current"){
     cityTimeZone = moment.tz.guess()
@@ -36,6 +36,7 @@ function updateCity(event) {
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let cities = document.querySelector("#cities");
+  
   cities.innerHTML = `<div class="city">
           <div>
             <h2>${cityName}</h2>
@@ -49,8 +50,11 @@ function updateCity(event) {
         `;
 }
 
-updateTime();
-setInterval(updateTime, 1000);
 
 let citySelect = document.querySelector("#city");
 citySelect.addEventListener("change", updateCity);
+
+updateTime();
+setInterval(updateTime, 1000);
+
+setInterval(updateCity, 1000);
