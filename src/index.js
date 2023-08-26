@@ -12,6 +12,19 @@ if (losAngeles){
     )} <small>${currentTimeLA.format("A")}</small>`;
   }
 
+  // Singapore
+  let singapore = document.querySelector("#singapore");
+if (singapore) {
+  let singaporeDate = singapore.querySelector(".date");
+  let singaporeTime = singapore.querySelector(".time");
+  let currentTimeSingapore = moment().tz("America/Los_Angeles");
+
+  singaporeDate.innerHTML = currentTimeSingapore.format("MMMM Do YYYY");
+  singaporeTime.innerHTML = `${currentTimeSingapore.format(
+    "h:mm:ss"
+  )} <small>${currentTimeSingapore.format("A")}</small>`;
+}
+
   // Sydney
   let sydney = document.querySelector("#sydney");
 if (sydney) {
