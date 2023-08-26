@@ -36,8 +36,8 @@ function updateCity() {
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let cities = document.querySelector("#cities");
-  
-  cities.innerHTML = `<div class="city">
+  if (cityTime){
+    cities.innerHTML = `<div class="city">
           <div>
             <h2>${cityName}</h2>
             <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
@@ -48,6 +48,7 @@ function updateCity() {
         </div>
         <a href="index.html">Back to home ⬅️</a>
         `;
+  }
 }
 
 
@@ -56,5 +57,6 @@ citySelect.addEventListener("change", updateCity);
 
 updateTime();
 setInterval(updateTime, 1000);
-
 setInterval(updateCity, 1000);
+
+
